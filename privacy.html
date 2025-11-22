@@ -2,62 +2,145 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Datenschutzerklärung</title>
+  <title>Datenschutzerklärung – [APP-NAME]</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: #f4f5f7;
+      color: #222;
+    }
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 24px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+    }
+    h1, h2 {
+      color: #111827;
+    }
+    h1 {
+      margin-top: 0;
+      font-size: 1.9rem;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+    }
+    h2 {
+      margin-top: 24px;
+      font-size: 1.2rem;
+    }
+    .meta {
+      font-size: 0.95rem;
+      color: #4b5563;
+      margin-bottom: 16px;
+    }
+    p {
+      margin: 8px 0 12px;
+    }
+    strong {
+      font-weight: 600;
+    }
+    .section {
+      margin-bottom: 10px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .section:last-of-type {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Datenschutzerklärung</h1>
-  <p>
-    <strong>[APP-NAME]</strong><br>
-    Kontakt: <strong>[EMAIL-ADRESSE]</strong><br>
-    Stand: [TT.MM.JJJJ]
-  </p>
+  <main class="page">
+    <h1>Datenschutzerklärung</h1>
 
-  <h2>Verantwortlicher</h2>
-  <p>
-    Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App ist:<br>
-    <strong>[EMAIL-ADRESSE]</strong>
-  </p>
+    <div class="meta">
+      <p>
+        Gültig für die App <strong>[APP-NAME]</strong><br>
+        Kontakt: <strong>[EMAIL-ADRESSE]</strong><br>
+        Stand: <strong>[TT.MM.JJJJ]</strong>
+      </p>
+    </div>
 
-  <h2>Zweck der App</h2>
-  <p>
-    Diese App dient ausschließlich der lokalen Steuerung von Smart-Home-Geräten innerhalb des eigenen Heimnetzwerks.
-    Es erfolgt keine Kommunikation mit externen Servern oder Cloud-Diensten des Anbieters.
-  </p>
+    <section class="section">
+      <h2>Verantwortlicher</h2>
+      <p>
+        Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App ist:
+      </p>
+      <p>
+        <strong>[EMAIL-ADRESSE]</strong>
+      </p>
+    </section>
 
-  <h2>Verarbeitete Daten und Berechtigungen</h2>
-  <p>
-    Die App verarbeitet ausschließlich Daten, die zur Funktion der Smart-Home-Steuerung erforderlich sind
-    (z. B. lokale IP-Adressen, Netzwerkzugriff, Socket.IO-Kommunikation).
-    Es findet keine Weitergabe oder Verarbeitung durch den Anbieter oder Dritte statt.
-  </p>
+    <section class="section">
+      <h2>Zweck der App</h2>
+      <p>
+        Diese App dient ausschließlich der lokalen Steuerung von Smart-Home-Geräten innerhalb des eigenen Heimnetzwerks.
+        Es erfolgt keine Kommunikation mit externen Servern oder Cloud-Diensten des Anbieters.
+      </p>
+    </section>
 
-  <h2>Speicherung von Daten</h2>
-  <p>
-    Konfigurationsdaten können lokal auf dem Gerät des Nutzers gespeichert werden.
-    Eine Übertragung nach außen findet nicht statt.
-  </p>
+    <section class="section">
+      <h2>Verarbeitete Daten und Berechtigungen</h2>
+      <p>
+        Die App verarbeitet ausschließlich Daten, die zur Funktion der Smart-Home-Steuerung erforderlich sind
+        (z.&nbsp;B. lokale IP-Adressen, Netzwerkzugriff, Socket.IO-Kommunikation mit lokalen Systemen).
+        Es findet keine Weitergabe oder Verarbeitung dieser Daten durch den Anbieter oder durch Dritte statt.
+      </p>
+    </section>
 
-  <h2>Weitergabe von Daten an Dritte</h2>
-  <p>
-    Es erfolgt keine Weitergabe personenbezogener Daten an Dritte.
-  </p>
+    <section class="section">
+      <h2>Speicherung von Daten</h2>
+      <p>
+        Konfigurationsdaten (z.&nbsp;B. IP-Adressen von Geräten oder lokale Verbindungsdaten) können lokal
+        auf dem Gerät des Nutzers gespeichert werden, um die Steuerung zu ermöglichen.
+        Eine Übertragung dieser Daten außerhalb des Heimnetzwerks findet nicht statt.
+      </p>
+    </section>
 
-  <h2>Rechte der Nutzer</h2>
-  <p>
-    Nutzer haben die üblichen Rechte nach DSGVO.
-    Da der Anbieter jedoch keine Daten speichert oder verarbeitet, erfolgen Änderungen oder Löschung lokal durch den Nutzer selbst,
-    z. B. durch Entfernen der Konfiguration oder Deinstallation der App.
-    Für Rückfragen: <strong>[EMAIL-ADRESSE]</strong>
-  </p>
+    <section class="section">
+      <h2>Weitergabe von Daten an Dritte</h2>
+      <p>
+        Es erfolgt keine Weitergabe personenbezogener Daten an Dritte.
+      </p>
+    </section>
 
-  <h2>Sicherheit</h2>
-  <p>
-    Die Sicherung und korrekte Konfiguration des Heimnetzwerks liegt in der Verantwortung des Nutzers.
-  </p>
+    <section class="section">
+      <h2>Rechte der Nutzer</h2>
+      <p>
+        Nutzer haben die üblichen Rechte nach DSGVO (z.&nbsp;B. Auskunft, Berichtigung, Löschung).
+        Da der Anbieter jedoch keine personenbezogenen Daten speichert oder verarbeitet, erfolgen Änderungen oder Löschungen
+        direkt durch den Nutzer selbst, etwa durch Entfernen der lokalen Konfiguration oder durch Deinstallation der App.
+      </p>
+      <p>
+        Für Rückfragen kann jederzeit Kontakt aufgenommen werden unter:<br>
+        <strong>[EMAIL-ADRESSE]</strong>
+      </p>
+    </section>
 
-  <h2>Änderungen dieser Datenschutzerklärung</h2>
-  <p>
-    Die aktuelle Version wird im Store oder über die bereitgestellte URL veröffentlicht.
-  </p>
+    <section class="section">
+      <h2>Sicherheit</h2>
+      <p>
+        Die App arbeitet ausschließlich innerhalb des lokalen Netzwerks. Die Absicherung und korrekte Konfiguration
+        des Heimnetzwerks (z.&nbsp;B. Router, WLAN, Firewall, Smart-Home-Geräte) liegt in der Verantwortung des Nutzers.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Änderungen dieser Datenschutzerklärung</h2>
+      <p>
+        Diese Datenschutzerklärung kann bei Bedarf angepasst werden, etwa wenn sich die Funktionalität der App
+        oder rechtliche Vorgaben ändern. Die jeweils aktuelle Version wird über diese Seite bzw. im Store bereitgestellt.
+      </p>
+    </section>
+  </main>
 </body>
 </html>
