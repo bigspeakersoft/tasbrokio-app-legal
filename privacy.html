@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Datenschutzerklärung – [APP-NAME]</title>
+  <title>Datenschutzerklärung – bigspeak</title>
   <style>
     * {
       box-sizing: border-box;
@@ -56,6 +56,22 @@
     .section:last-of-type {
       border-bottom: none;
     }
+    .email-link {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 6px;
+      background: #e5e7eb;
+      font-size: 0.95rem;
+    }
+    .email-link:hover {
+      background: #d1d5db;
+    }
+    noscript {
+      display: block;
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
@@ -64,9 +80,14 @@
 
     <div class="meta">
       <p>
-        Gültig für die App <strong>[APP-NAME]</strong><br>
-        Kontakt: <strong>[EMAIL-ADRESSE]</strong><br>
-        Stand: <strong>[TT.MM.JJJJ]</strong>
+        Gültig für die App <strong>bigspeak</strong><br>
+        Kontakt:
+        <span id="email-display-privacy" class="email-link">E-Mail anzeigen</span>
+        <noscript>
+          Bitte JavaScript aktivieren oder schreiben Sie an:
+          bigspeak [at] gmail [dot] com
+        </noscript><br>
+        Stand: <strong>23.11.2025</strong>
       </p>
     </div>
 
@@ -76,7 +97,11 @@
         Verantwortlich für die Datenverarbeitung im Zusammenhang mit dieser App ist:
       </p>
       <p>
-        <strong>[EMAIL-ADRESSE]</strong>
+        <span id="email-display-privacy-2" class="email-link">E-Mail anzeigen</span>
+        <noscript>
+          Bitte JavaScript aktivieren oder schreiben Sie an:
+          bigspeak [at] gmail [dot] com
+        </noscript>
       </p>
     </section>
 
@@ -122,7 +147,11 @@
       </p>
       <p>
         Für Rückfragen kann jederzeit Kontakt aufgenommen werden unter:<br>
-        <strong>[EMAIL-ADRESSE]</strong>
+        <span id="email-display-privacy-3" class="email-link">E-Mail anzeigen</span>
+        <noscript>
+          Bitte JavaScript aktivieren oder schreiben Sie an:
+          bigspeak [at] gmail [dot] com
+        </noscript>
       </p>
     </section>
 
@@ -142,5 +171,26 @@
       </p>
     </section>
   </main>
+
+  <script>
+    (function() {
+      var user = 'bigspeak';
+      var domain = 'gmail.com';
+      var addr = user + '@' + domain;
+
+      function setupEmail(id) {
+        var el = document.getElementById(id);
+        if (!el) return;
+        el.style.cursor = 'pointer';
+        el.onclick = function () {
+          el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
+        };
+      }
+
+      setupEmail('email-display-privacy');
+      setupEmail('email-display-privacy-2');
+      setupEmail('email-display-privacy-3');
+    })();
+  </script>
 </body>
 </html>
