@@ -148,23 +148,23 @@
     </section>
   </main>
 
-  <script>
-    (function() {
-      var user = 'bigspeak';
-      var domain = 'gmail.com';
-      var addr = user + '@' + domain;
+<script>
+  (function() {
+    var userParts = ['big', 'speak'];
+    var domainParts = ['g', 'mail', '.com'];
+    var addr = userParts.join('') + '@' + domainParts.join('');
 
-      function setupEmail(id) {
-        var el = document.getElementById(id);
-        if (!el) return;
-        el.style.cursor = 'pointer';
-        el.onclick = function () {
-          el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
-        };
-      }
+    function setupEmail(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.cursor = 'pointer';
+      el.onclick = function () {
+        window.location.href = 'mailto:' + addr;
+        el.textContent = 'E-Mail öffnen';
+      };
+    }
 
-      setupEmail('email-display-eula');
-    })();
-  </script>
-</body>
-</html>
+    setupEmail('email-display-eula');
+  })();
+</script>
+
