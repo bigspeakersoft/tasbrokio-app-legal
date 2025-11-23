@@ -173,24 +173,26 @@
   </main>
 
   <script>
-    (function() {
-      var user = 'bigspeak';
-      var domain = 'gmail.com';
-      var addr = user + '@' + domain;
+  (function() {
+    // E-Mail in Teile zerlegt, damit Bots sie schlechter direkt erkennen
+    var userParts = ['big', 'speak'];
+    var domainParts = ['g', 'mail', '.com'];
+    var addr = userParts.join('') + '@' + domainParts.join('');
 
-      function setupEmail(id) {
-        var el = document.getElementById(id);
-        if (!el) return;
-        el.style.cursor = 'pointer';
-        el.onclick = function () {
-          el.innerHTML = '<a href="mailto:' + addr + '">' + addr + '</a>';
-        };
-      }
+    function setupEmail(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.style.cursor = 'pointer';
+      el.onclick = function () {
+        // Kein Klartext, direkt Mailprogramm öffnen
+        window.location.href = 'mailto:' + addr;
+        el.textContent = 'E-Mail öffnen';
+      };
+    }
 
-      setupEmail('email-display-privacy');
-      setupEmail('email-display-privacy-2');
-      setupEmail('email-display-privacy-3');
-    })();
-  </script>
-</body>
-</html>
+    setupEmail('email-display-privacy');
+    setupEmail('email-display-privacy-2');
+    setupEmail('email-display-privacy-3');
+  })();
+</script>
+
